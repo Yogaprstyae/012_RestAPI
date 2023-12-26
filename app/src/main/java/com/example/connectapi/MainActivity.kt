@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.connectapi.ui.KontakApp
-import com.example.connectapi.ui.home.screen.HomeScreen
 import com.example.connectapi.ui.theme.ConnectApiTheme
 
 class MainActivity : ComponentActivity() {

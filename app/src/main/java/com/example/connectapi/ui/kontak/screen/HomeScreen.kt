@@ -1,4 +1,4 @@
-package com.example.connectapi.ui.home.screen
+package com.example.connectapi.ui.kontak.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -38,8 +38,8 @@ import androidx.compose.ui.unit.dp
 import com.example.connectapi.R
 import com.example.connectapi.model.Kontak
 import com.example.connectapi.navigation.DestinasiNavigasi
-import com.example.connectapi.ui.home.viewmodel.HomeViewModel
-import com.example.connectapi.ui.home.viewmodel.KontakUIState
+import com.example.connectapi.ui.kontak.viewmodel.HomeViewModel
+import com.example.connectapi.ui.kontak.viewmodel.KontakUIState
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.connectapi.TopAppBarKontak
 import com.example.connectapi.ui.PenyediaViewModel
