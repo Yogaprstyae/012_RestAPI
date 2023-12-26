@@ -37,7 +37,9 @@ import com.example.connectapi.ui.home.viewmodel.KontakUIState
 fun HomeStatus(
     kontakUIState: KontakUIState,
     retryAction: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onDeleteClick: (Kontak) -> Unit = {},
+    onDetailClick: (Kontak) -> Unit
 ) {
 
     when (kontakUIState) {
