@@ -1,6 +1,7 @@
 package com.example.connectapi.ui.home.screen
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -42,7 +43,6 @@ fun HomeScreen(
         is KontakUIState.Success -> KontakLayout(
             kontak = kontakUIState.kontak, modifier = modifier.fillMaxWidth()
         )
-
         is KontakUIState.Error -> OnError(retryAction, modifier = modifier.fillMaxSize())
     }
 
@@ -92,7 +92,14 @@ fun KontakLayout(kontak: List<Kontak>,
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         items(kontak) { kontak ->
-            KontakCard(kontak = kontak, modifier = Modifier.fillMaxWidth())
+            KontakCard(kontak = kontak,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onDetailClick(kontak) },
+                onDeleteClick = {
+                    onDeleteClick(kontak)
+                }
+            )
         }
     }
 
