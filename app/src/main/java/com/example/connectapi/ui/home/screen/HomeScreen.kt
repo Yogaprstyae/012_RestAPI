@@ -32,7 +32,10 @@ import androidx.compose.ui.unit.dp
 import com.example.connectapi.R
 import com.example.connectapi.model.Kontak
 import com.example.connectapi.navigation.DestinasiNavigasi
+import com.example.connectapi.ui.home.viewmodel.HomeViewModel
 import com.example.connectapi.ui.home.viewmodel.KontakUIState
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.connectapi.ui.PenyediaViewModel
 
 @Composable
 fun HomeStatus(
@@ -65,7 +68,12 @@ object DestinasiHome : DestinasiNavigasi {
 }
 
 @Composable
-fun HomeScreen(){}
+fun HomeScreen(
+    navigateToItemEntry: () -> Unit,
+    modifier: Modifier = Modifier,
+    onDetailClick: (Int) -> Unit = {},
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
+){}
 
 /**
  * The home screen displaying the loading message.
