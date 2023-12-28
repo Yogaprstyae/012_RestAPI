@@ -1,6 +1,5 @@
 package com.example.connectapi.ui
 
-import android.text.Spannable.Factory
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
@@ -20,5 +19,4 @@ object PenyediaViewModel {
     }
 }
 
-fun CreationExtras.aplikasiMars(): KontakAplication =
-    (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as KontakAplication)
+fun CreationExtras.aplikasiMars():KontakAplication = (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]as KontakAplication)

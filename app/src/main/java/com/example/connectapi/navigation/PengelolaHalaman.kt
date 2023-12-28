@@ -6,10 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.connectapi.ui.home.DestinasiHome
+import com.example.connectapi.ui.home.HomeScreen
 import com.example.connectapi.ui.kontak.screen.DestinasiEntry
-import com.example.connectapi.ui.kontak.screen.DestinasiHome
 import com.example.connectapi.ui.kontak.screen.EntryKontakScreen
-import com.example.connectapi.ui.kontak.screen.HomeScreen
 
 @Composable
 fun PengelolaHalaman(
@@ -21,7 +21,8 @@ fun PengelolaHalaman(
         modifier = Modifier,
     ){
         composable(DestinasiHome.route){
-            HomeScreen(navigateToItemEntry = {
+            HomeScreen(
+                navigateToItemEntry = {
                 navController.navigate(DestinasiEntry.route)
             },
                 onDetailClick = {
